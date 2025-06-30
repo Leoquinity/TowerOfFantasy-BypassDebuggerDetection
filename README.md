@@ -1,2 +1,11 @@
 # TowerOfFantasy-BypassDebuggerDetection
-TowerOfFantasy-BypassDebuggerDetection by Leoquinity
+
+It's My First Bypass Detection Debugger via Hooking DebugBreak and IsDebuggerPresent!!!
+
+Enjoy to use this!!!
+
+## Donations
+
+[LiberaPay](https://liberapay.com/RikkoMatsumatoOfficial/donate)
+
+**BTC Wallet Address**: bc1qz987mqatjrhuurme49sleq75a80atysgyska9e
