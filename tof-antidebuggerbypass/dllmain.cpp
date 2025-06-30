@@ -25,9 +25,9 @@ BOOL __stdcall hIsDebuggerPresent()
 }
 namespace tofantidebugger 
 {
-    void** GetKernel32_AntiDebuggerPresentAddr() {
+    void** GetKernel32_IsDebuggerPresentAddr() {
         HMODULE kernel32mod = GetModuleHandleA("kernel32.dll");
-        FARPROC znm = GetProcAddress(kernel32mod, (LPCSTR)"AntiDebuggerPresent");
+        FARPROC znm = GetProcAddress(kernel32mod, (LPCSTR)"IsDebuggerPresent");
         return (void**)znm;
     }
     void** GetKernel32_DebugBreakAddr() {
@@ -43,7 +43,7 @@ DWORD WINAPI Thread()
     if (st_init == MH_OK) {
         cout << "Successfully Initializated MinHook!!!" << endl;
     }
-    MH_STATUS statuszx = MH_CreateHook(tofantidebugger::GetKernel32_AntiDebuggerPresentAddr(), &hIsDebuggerPresent,(LPVOID*)(&oIsDebuggerPresent));
+    MH_STATUS statuszx = MH_CreateHook(tofantidebugger::GetKernel32_IsDebuggerPresentAddr(), &hIsDebuggerPresent,(LPVOID*)(&oIsDebuggerPresent));
     if (statuszx == MH_OK) {
         cout << "Successfully Added AntiDebuggerPresent Anti-Detection!!!" << endl;
     }
@@ -51,8 +51,7 @@ DWORD WINAPI Thread()
     if (azzquerty == MH_OK) {
         cout << "Successfully Added DebugBreak Anti-Detection!!!" << endl;
     }
-    MH_EnableHook(tofantidebugger::GetKernel32_AntiDebuggerPresentAddr());
-    MH_EnableHook(tofantidebugger::GetKernel32_DebugBreakAddr());
+    MH_EnableHook(MH_ALL_HOOKS);
     return TRUE;
 }
 
