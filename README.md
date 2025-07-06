@@ -4,6 +4,9 @@ It's My First Bypass Detection Debugger via Hooking DebugBreak and IsDebuggerPre
 
 Enjoy to use this!!!
 
+[Join To My Discord Server](https://discord.gg/rikkomatsumato)
+
+
 ## Donations
 
 [LiberaPay](https://liberapay.com/RikkoMatsumatoOfficial/donate)
