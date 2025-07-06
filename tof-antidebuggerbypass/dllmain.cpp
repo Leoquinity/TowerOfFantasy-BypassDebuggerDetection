@@ -15,12 +15,12 @@ void AllocateConsole() {
     SetConsoleTitleA("tof-antidebugger!!!");
 }
 void __stdcall hDebugBreak() {
-    MessageBoxA(0, "Intercepted!!!", "tof-antidebuggerbypass", MB_OK);
+    MessageBoxA(0, "Intercepted Function DebugBreak!!!", "tof-antidebuggerbypass", MB_OK);
     return (void)0x0;
 }
 BOOL __stdcall hIsDebuggerPresent() 
 {
-    MessageBoxA(0, "Intercepted!!!", "tof-antidebuggerbypass", MB_OK);
+    MessageBoxA(0, "Intercepted Function IsDebuggerPresent!!!", "tof-antidebuggerbypass", MB_OK);
     return FALSE;
 }
 namespace tofantidebugger 
